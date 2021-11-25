@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1
+CMAKE_SOURCE_DIR = F:\uni\IG\Practicas\p1ig
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug
+CMAKE_BINARY_DIR = F:\uni\IG\Practicas\p1ig\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/prac1.dir/depend.make
@@ -68,44 +68,44 @@ include CMakeFiles/prac1.dir/flags.make
 CMakeFiles/prac1.dir/src/Model.cpp.obj: CMakeFiles/prac1.dir/flags.make
 CMakeFiles/prac1.dir/src/Model.cpp.obj: CMakeFiles/prac1.dir/includes_CXX.rsp
 CMakeFiles/prac1.dir/src/Model.cpp.obj: ../src/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prac1.dir/src/Model.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\prac1.dir\src\Model.cpp.obj -c C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prac1.dir/src/Model.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\prac1.dir\src\Model.cpp.obj -c F:\uni\IG\Practicas\p1ig\src\Model.cpp
 
 CMakeFiles/prac1.dir/src/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prac1.dir/src/Model.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\Model.cpp > CMakeFiles\prac1.dir\src\Model.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\uni\IG\Practicas\p1ig\src\Model.cpp > CMakeFiles\prac1.dir\src\Model.cpp.i
 
 CMakeFiles/prac1.dir/src/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prac1.dir/src/Model.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\Model.cpp -o CMakeFiles\prac1.dir\src\Model.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\uni\IG\Practicas\p1ig\src\Model.cpp -o CMakeFiles\prac1.dir\src\Model.cpp.s
 
 CMakeFiles/prac1.dir/src/Shaders.cpp.obj: CMakeFiles/prac1.dir/flags.make
 CMakeFiles/prac1.dir/src/Shaders.cpp.obj: CMakeFiles/prac1.dir/includes_CXX.rsp
 CMakeFiles/prac1.dir/src/Shaders.cpp.obj: ../src/Shaders.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prac1.dir/src/Shaders.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\prac1.dir\src\Shaders.cpp.obj -c C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\Shaders.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prac1.dir/src/Shaders.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\prac1.dir\src\Shaders.cpp.obj -c F:\uni\IG\Practicas\p1ig\src\Shaders.cpp
 
 CMakeFiles/prac1.dir/src/Shaders.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prac1.dir/src/Shaders.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\Shaders.cpp > CMakeFiles\prac1.dir\src\Shaders.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\uni\IG\Practicas\p1ig\src\Shaders.cpp > CMakeFiles\prac1.dir\src\Shaders.cpp.i
 
 CMakeFiles/prac1.dir/src/Shaders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prac1.dir/src/Shaders.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\Shaders.cpp -o CMakeFiles\prac1.dir\src\Shaders.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\uni\IG\Practicas\p1ig\src\Shaders.cpp -o CMakeFiles\prac1.dir\src\Shaders.cpp.s
 
 CMakeFiles/prac1.dir/src/main.cpp.obj: CMakeFiles/prac1.dir/flags.make
 CMakeFiles/prac1.dir/src/main.cpp.obj: CMakeFiles/prac1.dir/includes_CXX.rsp
 CMakeFiles/prac1.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/prac1.dir/src/main.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\prac1.dir\src\main.cpp.obj -c C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/prac1.dir/src/main.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\prac1.dir\src\main.cpp.obj -c F:\uni\IG\Practicas\p1ig\src\main.cpp
 
 CMakeFiles/prac1.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prac1.dir/src/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\main.cpp > CMakeFiles\prac1.dir\src\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\uni\IG\Practicas\p1ig\src\main.cpp > CMakeFiles\prac1.dir\src\main.cpp.i
 
 CMakeFiles/prac1.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prac1.dir/src/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\src\main.cpp -o CMakeFiles\prac1.dir\src\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\uni\IG\Practicas\p1ig\src\main.cpp -o CMakeFiles\prac1.dir\src\main.cpp.s
 
 # Object files for target prac1
 prac1_OBJECTS = \
@@ -123,7 +123,7 @@ binary/prac1.exe: CMakeFiles/prac1.dir/build.make
 binary/prac1.exe: CMakeFiles/prac1.dir/linklibs.rsp
 binary/prac1.exe: CMakeFiles/prac1.dir/objects1.rsp
 binary/prac1.exe: CMakeFiles/prac1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable binary\prac1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable binary\prac1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\prac1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/prac1.dir/clean:
 .PHONY : CMakeFiles/prac1.dir/clean
 
 CMakeFiles/prac1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1 C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1 C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\cmake-build-debug\CMakeFiles\prac1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" F:\uni\IG\Practicas\p1ig F:\uni\IG\Practicas\p1ig F:\uni\IG\Practicas\p1ig\cmake-build-debug F:\uni\IG\Practicas\p1ig\cmake-build-debug F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles\prac1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/prac1.dir/depend
 

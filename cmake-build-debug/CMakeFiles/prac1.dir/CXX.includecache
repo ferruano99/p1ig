@@ -1092,7 +1092,7 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../../libraries2122/glm/include/glm/detail/func_vector_relational.hpp
 
-C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/src/Model.h
+F:/uni/IG/Practicas/p1ig/src/Model.h
 iostream
 -
 vector
@@ -1110,7 +1110,7 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
-C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/src/Shaders.h
+F:/uni/IG/Practicas/p1ig/src/Shaders.h
 iostream
 -
 fstream
@@ -1126,7 +1126,7 @@ glm/gtc/matrix_transform.hpp
 sstream
 -
 
-C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/src/main.cpp
+F:/uni/IG/Practicas/p1ig/src/main.cpp
 iostream
 -
 GL/glew.h
@@ -1134,7 +1134,9 @@ GL/glew.h
 GLFW/glfw3.h
 -
 Shaders.h
-C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/src/Shaders.h
+F:/uni/IG/Practicas/p1ig/src/Shaders.h
 Model.h
-C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/src/Model.h
+F:/uni/IG/Practicas/p1ig/src/Model.h
+cmath
+-
 
