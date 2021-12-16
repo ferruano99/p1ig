@@ -27,7 +27,7 @@ void funCursorPos(GLFWwindow *window, double xpos, double ypos);
 
 
 //FUNCIONES OBJECTOS
-void drawObject(Model model, glm::vec3 color, glm::mat4 P, glm::mat4 V, glm::mat4 M);
+void drawObject(Model model, Material material, glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
 void drawSuelo(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 
@@ -192,6 +192,79 @@ void configScene() {
     torus.initModel("resources/models/torus.obj");
     triangulo.initModel("resources/models/triangle.obj");
 
+    // Luz de ambiente global
+    lightG.ambient = glm::vec3(0.5, 0.5, 0.5);
+
+    // Luces direccionales
+    lightD[0].direction = glm::vec3(-1.0, 0.0, 0.0);
+    lightD[0].ambient   = glm::vec3( 0.1, 0.1, 0.1);
+    lightD[0].diffuse   = glm::vec3( 0.7, 0.7, 0.7);
+    lightD[0].specular  = glm::vec3( 0.7, 0.7, 0.7);
+
+    // Luces posicionales
+    lightP[0].position    = glm::vec3(0.0, 3.0, 3.0);
+    lightP[0].ambient     = glm::vec3(0.2, 0.2, 0.2);
+    lightP[0].diffuse     = glm::vec3(0.9, 0.9, 0.9);
+    lightP[0].specular    = glm::vec3(0.9, 0.9, 0.9);
+    lightP[0].c0          = 1.00;
+    lightP[0].c1          = 0.22;
+    lightP[0].c2          = 0.20;
+
+    lightF[0].position    = glm::vec3(-2.0,  2.0,  5.0);
+    lightF[0].direction   = glm::vec3( 2.0, -2.0, -5.0);
+    lightF[0].ambient     = glm::vec3( 0.2,  0.2,  0.2);
+    lightF[0].diffuse     = glm::vec3( 0.9,  0.9,  0.9);
+    lightF[0].specular    = glm::vec3( 0.9,  0.9,  0.9);
+    lightF[0].innerCutOff = 10.0;
+    lightF[0].outerCutOff = lightF[0].innerCutOff + 5.0;
+    lightF[0].c0          = 1.000;
+    lightF[0].c1          = 0.090;
+    lightF[0].c2          = 0.032;
+    lightF[1].position    = glm::vec3( 2.0,  2.0,  5.0);
+    lightF[1].direction   = glm::vec3(-2.0, -2.0, -5.0);
+    lightF[1].ambient     = glm::vec3( 0.2,  0.2,  0.2);
+    lightF[1].diffuse     = glm::vec3( 0.9,  0.9,  0.9);
+    lightF[1].specular    = glm::vec3( 0.9,  0.9,  0.9);
+    lightF[1].innerCutOff = 5.0;
+    lightF[1].outerCutOff = lightF[1].innerCutOff + 1.0;
+    lightF[1].c0          = 1.000;
+    lightF[1].c1          = 0.090;
+    lightF[1].c2          = 0.032;
+
+
+    // Materiales
+    ruby.ambient = {0.1745f, 0.01175f, 0.01175f, 0.55f};
+    ruby.diffuse = {0.61424f, 0.04136f, 0.04136f, 0.55f};
+    ruby.specular = {0.727811f, 0.626959f, 0.626959f, 0.55f};
+    ruby.shininess = 76.8f;
+    ruby.emissive = {0, 0, 0, 1};
+
+    pbronze.ambient = {0.25f, 0.148f, 0.06475f, 1.0f};
+    pbronze.diffuse = {0.4f, 0.2368f, 0.1036f, 1.0f};
+    pbronze.specular = {0.774597f, 0.458561f, 0.200621f, 1.0f};
+    pbronze.shininess = 76.8f;
+    pbronze.emissive = {0, 0, 0, 1};
+
+
+    gold.ambient = {0.24725f, 0.1995f, 0.0745f, 1.0f};
+    gold.diffuse = {0.75164f, 0.60648f, 0.22648f, 1.0f};
+    gold.specular = {0.628281f, 0.555802f, 0.366065f, 1.0f};
+    gold.shininess = 51.2f;
+    gold.emissive = {0, 0, 0, 1};
+
+    emerald.ambient = {0.0215f, 0.1745f, 0.0215f, 0.55f};
+    emerald.diffuse = {0.07568f, 0.61424f, 0.07568f, 0.55f};
+    emerald.specular = {0.633f, 0.727811f, 0.633f, 0.55f};
+    emerald.shininess = 76.8f;
+    emerald.emissive = {0, 0, 0, 1};
+
+    cyan.ambient = {0.0f, 0.05f, 0.05f, 1.0f};
+    cyan.diffuse = {0.4f, 0.5f, 0.5f, 1.0f};
+    cyan.specular = {0.04f, 0.7f, 0.7f, 1.0f};
+    cyan.shininess = 10.0f;
+    cyan.emissive = {0, 0, 0, 1};
+
+
 }
 
 void setLights() {
@@ -326,12 +399,12 @@ void drawCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
 void drawCuerpoCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.2 * 4, 0.2 * 3, 0.2 * 7));
-    drawObject(esfera, glm::vec3(0, 1, 0), P, V, M * S);
+    drawObject(esfera, ruby, P, V, M * S);
 }
 
 void drawCristalCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.2 * 2, 0.2 * 1.5, 0.2 * 2));
-    drawObject(esfera, glm::vec3(1, 0, 1), P, V, M * S);
+    drawObject(esfera, ruby, P, V, M * S);
 }
 
 void drawAspaRotor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
@@ -400,21 +473,21 @@ void drawEstabilizadorCola(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.4, 0.1, 0.2));
     glm::mat4 Rxe = glm::rotate(I, glm::radians(90.0f), glm::vec3(1, 0, 0));
     glm::mat4 Rye = glm::rotate(I, glm::radians(90.0f), glm::vec3(0, 1, 0));
-    drawObject(cilindro, glm::vec3(0, 0, 1), P, V, M * S * Rye * Rxe);
+    drawObject(cilindro, cyan, P, V, M * S * Rye * Rxe);
 }
 
 void drawConoCola(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.1, 2 * 0.2, 5 * 0.2));
     glm::mat4 R = glm::rotate(I, glm::radians(-90.0f), glm::vec3(1, 0, 0));
 
-    drawObject(cono, glm::vec3(1, 1, 0), P, V, M * S * R);
+    drawObject(cono, gold, P, V, M * S * R);
 
 }
 
 void drawToroideCola(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 Rz = glm::rotate(I, glm::radians(90.0f), glm::vec3(0, 0, 1));
     glm::mat4 St = glm::scale(I, glm::vec3(0.4, 0.4, 0.4));
-    drawObject(torus, glm::vec3(0, 1, 1), P, V, M * St * Rz);
+    drawObject(torus, cyan, P, V, M * St * Rz);
 }
 
 void drawAspaCola(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
