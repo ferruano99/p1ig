@@ -11,6 +11,11 @@ void configScene();
 
 void renderScene();
 
+
+//FUNCIÓN LUCES
+void setLights();
+
+
 //FUNCIONES CALLBACKS
 void funFramebufferSize(GLFWwindow *window, int width, int height);
 
@@ -76,6 +81,17 @@ void drawHelicoptero(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 // Shaders
 Shaders shaders;
 
+//Materiales y luces
+#define   NLD 1
+#define   NLP 1
+#define   NLF 2
+Light     lightG;
+Light     lightD[NLD];
+Light     lightP[NLP];
+Light     lightF[NLF];
+Material ruby, cyan, gold, emerald, pbronze;
+
+
 // Modelos
 Model plane, cilindro, esfera, cono, torus, triangulo;
 // Viewport
@@ -84,10 +100,10 @@ int h = 500;
 
 
 //zoom de la cámara
-float fovy = 40.0;
+float fovy = 50.0;
 //Movimiento de la cámara
-float alphaX = 0.0;
-float alphaY = 0.0;
+float alphaX = 40.0;
+float alphaY = 25.0;
 double lastX = w / 2; //última pos de la X para girar girar el ratón en compás con la imagen (Se comienza con w/2 y h/2 para halalr el centro de la pantalla)
 double lastY = h / 2;
 
@@ -178,6 +194,13 @@ void configScene() {
 
 }
 
+void setLights() {
+    shaders.setLight("ulightG", lightG);
+    for(int i=0; i<NLD; i++) shaders.setLight("ulightD["+toString(i)+"]",lightD[i]);
+    for(int i=0; i<NLP; i++) shaders.setLight("ulightP["+toString(i)+"]",lightP[i]);
+    for(int i=0; i<NLF; i++) shaders.setLight("ulightF["+toString(i)+"]",lightF[i]);
+}
+
 void renderScene() {
 
     // Borramos el buffer de color
@@ -202,6 +225,9 @@ void renderScene() {
     glm::vec3 center(0, 0, 0.0);
     glm::vec3 up(0, 1, 0);
     glm::mat4 V = glm::lookAt(eye, center, up);
+
+    //Fijamos las luces
+    setLights();
 
     // Dibujamos la escena
     drawSuelo(P, V, I);
@@ -230,24 +256,21 @@ void renderScene() {
 
 }
 
-void drawObject(Model model, glm::vec3 color, glm::mat4 P, glm::mat4 V, glm::mat4 M) {
+void drawObject(Model model, Material material, glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
+    shaders.setMat4("uN"  ,glm::transpose(glm::inverse(M)));
+    shaders.setMat4("uM"  ,M);
     shaders.setMat4("uPVM", P * V * M);
-
-    glEnable(GL_POLYGON_OFFSET_FILL);
-    shaders.setVec3("uColor", color);
+    shaders.setMaterial("umaterial", material);
     model.renderModel(GL_FILL);
-    glDisable(GL_POLYGON_OFFSET_FILL);
 
-    shaders.setVec3("uColor", glm::vec3(0.75, 0.75, 0.75) * color);
-    model.renderModel(GL_LINE);
 
 }
 
 void drawSuelo(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
     glm::mat4 S = glm::scale(I, glm::vec3(7.2, 0.0, 7.2));
-    drawObject(plane, glm::vec3(0.5, 0.5, 0.5), P, V, M * S);
+    drawObject(plane, cyan, P, V, M * S);
 
 }
 
@@ -282,14 +305,14 @@ void drawPata(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 void drawSoportePata(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 R = glm::rotate(I, glm::radians(90.0f), glm::vec3(1, 0, 0));
     glm::mat4 S = glm::scale(I, glm::vec3(0.1, 0.1, 1.2));
-    drawObject(cilindro, glm::vec3(0, 0, 1), P, V, M * S * R);
+    drawObject(cilindro, pbronze, P, V, M * S * R);
 }
 
 void drawPataInclinada(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 R = glm::rotate(I, glm::radians(45.0f), glm::vec3(0, 0, 1));
     glm::mat4 S = glm::scale(I, glm::vec3(0.1, 0.2 * 3, 0.1));
     glm::mat4 T = glm::translate(I, glm::vec3(0.2 * 2.5, -0.2 * 2.5, 0));
-    drawObject(cilindro, glm::vec3(0, 0, 1), P, V, M * T * R * S);
+    drawObject(cilindro, pbronze, P, V, M * T * R * S);
 }
 
 void drawCabina(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
@@ -315,7 +338,7 @@ void drawAspaRotor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.2, 0.2 * 6, 0.05));
     glm::mat4 T = glm::translate(I, glm::vec3(0, 0, -6 * 0.2));
     glm::mat4 R = glm::rotate(I, glm::radians(90.0f), glm::vec3(1, 0, 0));
-    drawObject(cono, glm::vec3(1, 0, 0), P, V, M * T * R * S);
+    drawObject(cono, ruby, P, V, M * T * R * S);
 }
 
 
@@ -329,7 +352,7 @@ void drawHeliceRotor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
 
 void drawSoporteRotor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(0.1, 0.1, 0.1));
-    drawObject(cilindro, glm::vec3(0, 0, 1), P, V, M * S);
+    drawObject(cilindro, cyan, P, V, M * S);
 }
 
 void drawRotor(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
@@ -398,7 +421,7 @@ void drawAspaCola(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
     glm::mat4 S = glm::scale(I, glm::vec3(1, 0.2, 0.04));
     glm::mat4 R = glm::rotate(I, glm::radians(90.0f), glm::vec3(0, 1, 0));
     glm::mat4 T = glm::translate(I, glm::vec3(0, -1, 0));
-    drawObject(triangulo, glm::vec3(1, 0, 0), P, V, M * S * T * R);
+    drawObject(triangulo, ruby, P, V, M * S * T * R);
 }
 
 void drawHeliceCola(glm::mat4 P, glm::mat4 V, glm::mat4 M) {
@@ -588,8 +611,9 @@ void funCursorPos(GLFWwindow *window, double xpos, double ypos) {
     float anguloY = 90 / centroY;
 
 
-    if ((alphaY + anguloY * (lastY - ypos)) <= 89 && (alphaY + anguloY * (lastY - ypos)) >= -89) {
-        alphaY += anguloY * (lastY - ypos); //se le suma el ángulo y multiplicamos por los píxeles que el ratón no ha sido capaz de coger en el frame anterior
+    if ((alphaY + anguloY * (lastY - ypos)) <= 90 && (alphaY + anguloY * (lastY - ypos)) >= -90) {
+        alphaY += anguloY * (lastY -
+                             ypos); //se le suma el ángulo y multiplicamos por los píxeles que el ratón no ha sido capaz de coger en el frame anterior
     }
     alphaX += anguloX * (xpos - lastX); //igual
 
