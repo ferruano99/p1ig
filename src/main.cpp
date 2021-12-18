@@ -82,8 +82,8 @@ void drawHelicoptero(glm::mat4 P, glm::mat4 V, glm::mat4 M);
 Shaders shaders;
 
 //Materiales y luces
-#define   NLD 1
-#define   NLP 1
+#define   NLD 1  //Número de luces direccionales
+#define   NLP 1  //Número de luces posicionales
 #define   NLF 2
 Light     lightG;
 Light     lightD[NLD];
@@ -179,7 +179,7 @@ void configScene() {
 
     // Test de profundidad
     glEnable(GL_DEPTH_TEST);
-    glPolygonOffset(1.0, 1.0);
+    //glPolygonOffset(1.0, 1.0);
 
     // Shaders
     shaders.initShaders("resources/shaders/vshader.glsl", "resources/shaders/fshader.glsl");
@@ -293,6 +293,7 @@ void renderScene() {
     float x = 10.0f * glm::cos(glm::radians(alphaY)) * glm::sin(glm::radians(alphaX));
     float y = 10.0f * glm::sin(glm::radians(alphaY));
     float z = 10.0f * glm::cos(glm::radians(alphaY)) * glm::cos(glm::radians(alphaX));
+
 
     glm::vec3 eye(x, y, z);
     glm::vec3 center(0, 0, 0.0);

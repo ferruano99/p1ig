@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig
+CMAKE_SOURCE_DIR = F:\uni\IG\Practicas\p1ig
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug
+CMAKE_BINARY_DIR = F:\uni\IG\Practicas\p1ig\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles F:\uni\IG\Practicas\p1ig\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -112,29 +112,29 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named prac1
+# Target rules for targets named p1ig
 
 # Build rule for target.
-prac1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 prac1
-.PHONY : prac1
+p1ig: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 p1ig
+.PHONY : p1ig
 
 # fast build rule for target.
-prac1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/build
-.PHONY : prac1/fast
+p1ig/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/build
+.PHONY : p1ig/fast
 
 src/Model.obj: src/Model.cpp.obj
 .PHONY : src/Model.obj
 
 # target to build an object file
 src/Model.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/Model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/Model.cpp.obj
 .PHONY : src/Model.cpp.obj
 
 src/Model.i: src/Model.cpp.i
@@ -142,7 +142,7 @@ src/Model.i: src/Model.cpp.i
 
 # target to preprocess a source file
 src/Model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/Model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/Model.cpp.i
 .PHONY : src/Model.cpp.i
 
 src/Model.s: src/Model.cpp.s
@@ -150,7 +150,7 @@ src/Model.s: src/Model.cpp.s
 
 # target to generate assembly for a file
 src/Model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/Model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/Model.cpp.s
 .PHONY : src/Model.cpp.s
 
 src/Shaders.obj: src/Shaders.cpp.obj
@@ -158,7 +158,7 @@ src/Shaders.obj: src/Shaders.cpp.obj
 
 # target to build an object file
 src/Shaders.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/Shaders.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/Shaders.cpp.obj
 .PHONY : src/Shaders.cpp.obj
 
 src/Shaders.i: src/Shaders.cpp.i
@@ -166,7 +166,7 @@ src/Shaders.i: src/Shaders.cpp.i
 
 # target to preprocess a source file
 src/Shaders.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/Shaders.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/Shaders.cpp.i
 .PHONY : src/Shaders.cpp.i
 
 src/Shaders.s: src/Shaders.cpp.s
@@ -174,7 +174,7 @@ src/Shaders.s: src/Shaders.cpp.s
 
 # target to generate assembly for a file
 src/Shaders.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/Shaders.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/Shaders.cpp.s
 .PHONY : src/Shaders.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -182,7 +182,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -190,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -198,7 +198,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -209,7 +209,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... prac1
+	@echo ... p1ig
 	@echo ... src/Model.obj
 	@echo ... src/Model.i
 	@echo ... src/Model.s
@@ -230,7 +230,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,16 +53,16 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig
+CMAKE_SOURCE_DIR = F:\uni\IG\Practicas\p1ig
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug
+CMAKE_BINARY_DIR = F:\uni\IG\Practicas\p1ig\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/prac1.dir/all
+all: CMakeFiles/p1ig.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/prac1.dir/clean
+clean: CMakeFiles/p1ig.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/prac1.dir
+# Target rules for target CMakeFiles/p1ig.dir
 
 # All Build rule for target.
-CMakeFiles/prac1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target prac1"
-.PHONY : CMakeFiles/prac1.dir/all
+CMakeFiles/p1ig.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target p1ig"
+.PHONY : CMakeFiles/p1ig.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/prac1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/prac1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/prac1.dir/rule
+CMakeFiles/p1ig.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/p1ig.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/p1ig.dir/rule
 
 # Convenience name for target.
-prac1: CMakeFiles/prac1.dir/rule
-.PHONY : prac1
+p1ig: CMakeFiles/p1ig.dir/rule
+.PHONY : p1ig
 
 # clean rule for target.
-CMakeFiles/prac1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\prac1.dir\build.make CMakeFiles/prac1.dir/clean
-.PHONY : CMakeFiles/prac1.dir/clean
+CMakeFiles/p1ig.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\p1ig.dir\build.make CMakeFiles/p1ig.dir/clean
+.PHONY : CMakeFiles/p1ig.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
@@ -106,7 +106,7 @@ CMakeFiles/prac1.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P C:\Users\ferna\Desktop\Universidad\4\IG\practicas\prac1\p1ig\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P F:\uni\IG\Practicas\p1ig\cmake-build-debug\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

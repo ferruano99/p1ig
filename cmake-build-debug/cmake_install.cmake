@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig
+# Install script for directory: F:/uni/IG/Practicas/p1ig
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "F:/uni/IG/Practicas/p1ig/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

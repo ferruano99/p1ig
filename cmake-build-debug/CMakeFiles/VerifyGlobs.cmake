@@ -3,13 +3,13 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SRC_FILES at CMakeLists.txt:19 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "F:/uni/IG/Practicas/p1ig/src/*.cpp")
 set(OLD_GLOB
-  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/Model.cpp"
-  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/Shaders.cpp"
-  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/main.cpp"
+  "F:/uni/IG/Practicas/p1ig/src/Model.cpp"
+  "F:/uni/IG/Practicas/p1ig/src/Shaders.cpp"
+  "F:/uni/IG/Practicas/p1ig/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "F:/uni/IG/Practicas/p1ig/cmake-build-debug/CMakeFiles/cmake.verify_globs")
 endif()

@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/Model.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/cmake-build-debug/CMakeFiles/p1ig.dir/src/Model.cpp.obj"
-  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/Shaders.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/cmake-build-debug/CMakeFiles/p1ig.dir/src/Shaders.cpp.obj"
-  "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/src/main.cpp" "C:/Users/ferna/Desktop/Universidad/4/IG/practicas/prac1/p1ig/cmake-build-debug/CMakeFiles/p1ig.dir/src/main.cpp.obj"
+  "F:/uni/IG/Practicas/p1ig/src/Model.cpp" "F:/uni/IG/Practicas/p1ig/cmake-build-debug/CMakeFiles/p1ig.dir/src/Model.cpp.obj"
+  "F:/uni/IG/Practicas/p1ig/src/Shaders.cpp" "F:/uni/IG/Practicas/p1ig/cmake-build-debug/CMakeFiles/p1ig.dir/src/Shaders.cpp.obj"
+  "F:/uni/IG/Practicas/p1ig/src/main.cpp" "F:/uni/IG/Practicas/p1ig/cmake-build-debug/CMakeFiles/p1ig.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
